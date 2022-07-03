@@ -6,18 +6,20 @@
 }
 
 body{
-    width: 100vw;;
+    width:calc(100vw - (100vw - 100%));
 }
 
-section{
-    margin: 20px 0;
+section, hr{
+    width: 65%;
+    margin: 20px auto;
+}
+
+@media screen and (max-width:642px) {
+    section, hr{
+        width: 90%;
+    }
 }
 
 .br{
     border: 1px solid black;
-}
-
-section{
-    width: 80%;
-    margin: 0 auto;
 }
