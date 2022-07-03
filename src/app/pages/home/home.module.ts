@@ -7,6 +7,7 @@ import { CarouselComponent } from './../../components/carousel/carousel.componen
 import { ContactFormComponent } from './../../components/contact-form/contact-form.component';
 import { EducationComponent } from './../../components/education/education.component';
 import { ProjectsComponent } from './../../components/projects/projects.component';
+import { GalleryComponent } from '../../components/gallery/gallery.component'
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProjectsComponent } from './../../components/projects/projects.componen
     CarouselComponent,
     EducationComponent,
     ProjectsComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    GalleryComponent
   ],
   imports: [
     CommonModule,
