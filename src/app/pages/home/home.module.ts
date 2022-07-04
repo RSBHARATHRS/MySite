@@ -8,6 +8,7 @@ import { ContactFormComponent } from './../../components/contact-form/contact-fo
 import { EducationComponent } from './../../components/education/education.component';
 import { ProjectsComponent } from './../../components/projects/projects.component';
 import { GalleryComponent } from '../../components/gallery/gallery.component'
+import { ExperienceComponent } from 'src/app/components/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GalleryComponent } from '../../components/gallery/gallery.component'
     EducationComponent,
     ProjectsComponent,
     ContactFormComponent,
-    GalleryComponent
+    GalleryComponent,
+    ExperienceComponent
   ],
   imports: [
     CommonModule,
