@@ -1,19 +1,20 @@
 <header class="header" id="header">
     <nav class="navbar container">
-        <a href="./index.html" class="brand">Bharath</a>
-        <div class="burger" id="burger">
+        <a routerLink="/home" class="brand">Bharath R</a>
+        <div class="burger" id="burger" (click)="openSideNav()">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
             <span class="burger-line"></span>
         </div>
-        <span class="overlay"></span>
-        <div class="menu" id="menu">
+        <span [ngClass]="{'overlay':true, 'is-active' : navActive }" id="overlay" (click)="openSideNav()"></span>
+        <div class="menu" [ngClass]="{'is-active':navActive}" id="menu">
             <ul class="menu-inner">
-                <li class="menu-item"><a class="menu-link is-active" routerLink="/home">Home</a></li>
-                <li class="menu-item"><a class="menu-link" routerLink="/admin">Admin</a></li>
-                <li class="menu-item"><a class="menu-link" routerLink="/projects">Project</a></li>
-                <li class="menu-item"><a class="menu-link" routerLink="/about">About</a></li>
-                <li class="menu-item"><a class="menu-link" href="#">Contact</a></li>
+                <li class="menu-item"><a class="menu-link" routerLink="/home" routerLinkActive="active">Home</a></li>
+                <li class="menu-item"><a class="menu-link" routerLink="/admin" routerLinkActive="active">Admin</a></li>
+                <li class="menu-item"><a class="menu-link" routerLink="/projects" routerLinkActive="active">Project</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" routerLink="/about" routerLinkActive="active">About</a></li>
+                <li class="menu-item"><a class="menu-link" routerLink="/about">Contact</a></li>
             </ul>
         </div>
         <button><i class="bx bx-search search-toggle"></i></button>

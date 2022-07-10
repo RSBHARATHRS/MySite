@@ -1,31 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
-
-:root {
-   --color-black: hsl(0, 0%, 10%);
-   --color-darks: hsl(0, 0%, 25%);
-   --color-greys: hsl(0, 0%, 60%);
-   --color-light: hsl(0, 0%, 96%);
-   --color-white: hsl(0, 0%, 100%);
-
-   --color-green-100: hsl(152, 24%, 45%);
-   --color-green-200: hsl(152, 24%, 40%);
-   --color-green-300: hsl(152, 24%, 35%);
-
-   --display-100: clamp(0.88rem, calc(0.8rem + 0.38vw), 1rem);
-   --display-200: clamp(1rem, calc(0.96rem + 0.18vw), 1.13rem);
-   --display-300: clamp(1.2rem, calc(1.11rem + 0.43vw), 1.5rem);
-
-   --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-      0 1px 2px 0 rgba(0, 0, 0, 0.06);
-   --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
-   --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-      0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
+$color-white: rgb(255, 255, 255);
 
 .header{
-	background-color: white!important;
+	background-color: rgba(255, 255, 255,0.6)!important;
 	nav{
+		.burger{
+			.burger-line{
+				height: 2px;
+				width: 100%;
+				background-color: black;
+			}
+		}
 		.menu{
 			height: 100%;
 			ul{
@@ -41,8 +25,12 @@
 						justify-content: center;
 						align-items: center;
 						padding: 0 30%;
+						&.active{
+							background-color: rgb(0, 0, 249);
+							color: white;
+						}
 						&:hover{
-							background-color: blue;
+							background-color: rgba(0, 0, 249, 0.7);
 							color: white;
 						}
 					}
@@ -83,7 +71,7 @@ button {
    line-height: 1.5;
    letter-spacing: -1px;
    text-transform: uppercase;
-   color: var(--color-green-300);
+   color: rgb(18, 18, 222);
 }
 
 // Header
@@ -93,10 +81,10 @@ button {
    top: 0;
    width: 100%;
    height: auto;
-   z-index: 10;
+   z-index: 100;
    margin: 0 auto;
-   background-color: var(--color-white);
-   box-shadow: var(--shadow-medium);
+//    background-color: $color-white;
+//    box-shadow: var(--shadow-medium);
 }
 
 .navbar {
@@ -116,12 +104,11 @@ button {
    left: -100%;
    width: 80%;
    height: 100%;
-   z-index: 10;
-   overflow-y: auto;
-   background-color: var(--color-white);
-   box-shadow: var(--shadow-medium);
+   z-index: 100;
+   background-color: white;
+//    box-shadow: var(--shadow-medium);
    transition: all 0.45s ease-in-out;
-
+	
    &.is-active {
       top: 0;
       left: 0;
@@ -130,9 +117,10 @@ button {
    &-inner {
       display: flex;
       flex-direction: column;
-	  justify-content: space-around;
-    //   row-gap: 1.25rem;
-    //   margin: 2rem 1.25rem;
+	  justify-content: center;
+	  width: 100%;
+      row-gap: 1.25rem;
+      margin: 2rem 1.25rem;
    }
 
    &-link {
@@ -150,15 +138,16 @@ button {
       top: 0;
       left: 0;
       width: auto;
-      height: auto;
       margin-left: auto;
       background: none;
+	//   background-color: $color-white;
       box-shadow: none;
 
       &-inner {
+		
          display: flex;
          flex-direction: row;
-         column-gap: 1.75rem;
+         column-gap: 1rem;
          margin: 0 auto;
          margin-right: 3rem;
       }
@@ -183,7 +172,7 @@ button {
    height: auto;
    border: none;
    outline: none;
-   visibility: visible;
+   visibility: visible!important;
 
    &-line {
       display: block;
@@ -209,7 +198,7 @@ button {
    left: 0;
    width: 100%;
    height: 100%;
-   z-index: 9;
+   z-index: 99;
    opacity: 0;
    visibility: hidden;
    background-color: rgba(0, 0, 0, 0.6);
@@ -243,7 +232,7 @@ button {
       width: 100%;
       height: 4rem;
       padding: 0 1rem;
-      z-index: 10;
+      z-index: 100;
       overflow: hidden;
       background-color: var(--color-white);
       transition: all 0.5s ease-in-out;
