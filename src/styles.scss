@@ -14,6 +14,10 @@ section, hr{
     margin: 20px auto;
 }
 
+li{
+    list-style: none;
+}
+
 @media screen and (max-width:642px) {
     section, hr{
         width: 90%;
