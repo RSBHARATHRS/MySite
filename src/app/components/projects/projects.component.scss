@@ -1,0 +1,51 @@
+section{
+    .projectContainer{
+        .container{
+            .row{
+                width: 100%;
+                // min-width: 200px;
+                display: flex;
+                flex-wrap: wrap;
+                .card{
+                    margin: 10px 0;
+                    display: flex;
+                    img{
+                        width: 220px;
+                        height: fit-content;
+                    }
+                    .card-body{
+                        // min-width: 200px;
+                        p{
+                        min-width: 100px;
+                        }
+                        margin: 0 0 0 20px;
+                    }
+                }
+                @media screen and (max-width:640px) {
+                    .card{
+                        img{
+                            width: 100%;
+                        }
+                        .card-body{
+                            margin: 0;
+                            p{
+                                // min-width: 300px;
+                                color: blue;
+                            }
+                        }
+                        display: block;
+                        // background-color: orange;
+                        min-width: 300px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

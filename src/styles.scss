@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    width:calc(100vw - calc(100vw - 100%));
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+section, hr{
+    width: 65%;
+    margin: 20px auto;
+}
+
+li{
+    list-style: none;
+}
+
+@media screen and (max-width:642px) {
+    section, hr{
+        width: 90%;
+    }
+}
+
+.br{
+    border: 1px solid black;
+}
