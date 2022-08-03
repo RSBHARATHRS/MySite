@@ -20,7 +20,7 @@ input {
 }
 
 article {
-    width: percentage(1/$num-of-slide);
+    width: percentage(calc(1/$num-of-slide));
     float: left;
     position: relative;
 
