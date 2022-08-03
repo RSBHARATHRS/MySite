@@ -19,14 +19,14 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
-          repository: rsbharathrs/MySite
-          path: MySite
+          repository: RSBHARATHRS/MySite
+          path: main
       - name: Install Dependencies
         run: npm install
       - name: Build
         run: npm run build
       - name: Archive Production Artifact
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v3
         with:
           name: dist
           path: dist
@@ -36,9 +36,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
       - name: Download Artifact
-        uses: actions/download-artifact@main
+        uses: actions/download-artifact@v3
         with:
           name: dist
           path: dist
