@@ -4,6 +4,14 @@ $gutter: 30px;
 $border-width: 4px;
 $dot-diameter: 8px;
 
+section{
+  .container{
+    h2{
+      margin: 0 0 2em 1em;
+
+    }
+  }
+}
 // body {
 //   background: linear-gradient(55deg,#4E75B9 30%,#5CBF98 90%);
 //   display: flex;
@@ -26,7 +34,7 @@ $dot-diameter: 8px;
   width:100%;
 //   max-width:800px;
   background:#fff;
-  padding: 100px 50px;
+  padding: 20px 10px 20px 4px;
   position: relative;
   box-shadow: $container-shadow;
   &:before {
