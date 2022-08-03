@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
   }
 
   openSideNav() {
-    console.log(this.navActive);
     this.navActive = !this.navActive;
   }
 
