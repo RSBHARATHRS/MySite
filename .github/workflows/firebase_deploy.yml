@@ -39,11 +39,9 @@ jobs:
           name: dist
           path: dist/my-site
       - name: Deploy to firebase
-        uses: actions/firebase@main
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOCKEN: ${{secrets.FIREBASE_TOCKEN}}
+        env: 
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
         
     
     
