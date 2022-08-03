@@ -3,11 +3,11 @@
 
 name: Deploy
 
-on:
-  pull_request:
+on
+  pull_request_review:
     branches: ["main"]
     types:
-       - submitted
+      - submitted
 
 jobs:
   Build:
