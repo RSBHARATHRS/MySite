@@ -8,28 +8,42 @@ on:
     branches: [ "main" ]
 
 jobs:
-  deploy_to_live:
-    name: Deploy prod hosting
+  Build:
+    name: Build
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node: [16]
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-      - name: Install Yarn
-        run: npm install yarn@latest -g
-      - name: Install Firebase Tools
-        run: npm install firebase-tools -g
+      - name: Checkout repository
+        uses: actions/checkout@main
       - name: Install dependencies
-        run: yarn
+        run: npm ci
       - name: Run build
-        env: 
-          SOME_SECRET_KEY: ${{ secrets.SOME_SECRET_KEY }}
-        run: yarn build
-      - name: Run deploy
-        env: 
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        run: firebase deploy --only hosting:${{ secrets.FIREBASE_HOSTING_ID }} -P ${{ secrets.FIREBASE_PROJECT_ID }}
+        run: npm run build
+      - name: Archive production artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: dist
+          path: dist/my-site
+  Deploy:
+    name: Deploy
+    needs: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Download artifacts
+        uses: actions/download-artifact@main
+        with:
+          name: dist
+          path: dist/my-site
+      - name: Deploy to firebase
+        uses: actions/firebase@main
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOCKEN: ${{secrets.FIREBASE_TOCKEN}}
+        
+    
+    
