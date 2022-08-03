@@ -3,10 +3,13 @@
 
 name: Deploy
 
-on
-  pull_request_review:
+on:
+  # Trigger on Pull Requests against the master branch.
+  pull_request_target:
+    branches:
+      - main
     types:
-      - submitted
+      - closed
 
 jobs:
   Build:
