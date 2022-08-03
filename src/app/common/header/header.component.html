@@ -1,13 +1,26 @@
-<header class="br">
-    <div class="header-title">
-        <span>Bharath</span>
-    </div>
-    <nav class="br">
-        <ul  class="menu-bar">
-            <li>Home</li>
-            <li>Projects</li>
-            <li>About</li>
-        </ul>
+<header class="header" id="header">
+    <nav class="navbar container">
+        <a routerLink="/home" class="brand">Bharath R</a>
+        <div class="burger" id="burger" (click)="openSideNav()">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
+        <span [ngClass]="{'overlay':true, 'is-active' : navActive }" id="overlay" (click)="openSideNav()"></span>
+        <div class="menu" [ngClass]="{'is-active':navActive}" id="menu">
+            <ul class="menu-inner">
+                <li class="menu-item"><a class="menu-link" routerLink="/home" routerLinkActive="active">Home</a></li>
+                <li class="menu-item"><a class="menu-link" routerLink="/admin" routerLinkActive="active">Admin</a></li>
+                <li class="menu-item"><a class="menu-link" routerLink="/projects" routerLinkActive="active">Project</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" routerLink="/about" routerLinkActive="active">About</a></li>
+                <li class="menu-item"><a class="menu-link" routerLink="/about">Contact</a></li>
+            </ul>
+        </div>
+        <button><i class="bx bx-search search-toggle"></i></button>
+        <form class="search-block">
+            <span><i class="bx bx-arrow-back search-cancel"></i></span>
+            <input type="search" name="search" class="search-input" placeholder="Search here..." autofocus>
+        </form>
     </nav>
 </header>
-<div class="clear"></div>

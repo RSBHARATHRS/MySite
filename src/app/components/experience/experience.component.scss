@@ -1,22 +1,12 @@
-/* Variables */
-/* Fonts */
-body {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: 0.05em;
-}
-
-/* Styling */
 .timeline {
   margin: 4em auto;
   position: relative;
   max-width: 46em;
 }
+
 .timeline:before {
   background-color: black;
-  content: '';
+  content: "";
   margin-left: -1px;
   position: absolute;
   top: 0;
@@ -27,7 +17,9 @@ body {
 
 .timeline-event {
   position: relative;
+  list-style: none;
 }
+
 .timeline-event:hover .timeline-event-icon {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -35,6 +27,7 @@ body {
   transform: rotate(-45deg);
   background-color: #a83279;
 }
+
 .timeline-event:hover .timeline-event-thumbnail {
   -moz-box-shadow: inset 40em 0 0 0 #a83279;
   -webkit-box-shadow: inset 40em 0 0 0 #a83279;
@@ -48,16 +41,20 @@ body {
   left: 4em;
   width: 80%;
 }
+
 .timeline-event-copy h3 {
   font-size: 1.75em;
 }
+
 .timeline-event-copy h4 {
   font-size: 1.2em;
   margin-bottom: 1.2em;
 }
+
 .timeline-event-copy strong {
   font-weight: 700;
 }
+
 .timeline-event-copy p:not(.timeline-event-thumbnail) {
   padding-bottom: 1.2em;
 }
