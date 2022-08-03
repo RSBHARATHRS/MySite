@@ -5,8 +5,10 @@
     padding: 0;
 }
 
-body{
-    width:calc(100vw - (100vw - 100%));
+body, html{
+    width:calc(100vw - calc(100vw - 100%));
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 section, hr{

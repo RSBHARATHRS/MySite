@@ -1,13 +1,10 @@
-
 /*---- NUMBER OF SLIDE CONFIGURATION ----*/
 $num-of-slide: 5;
 
 .wrapper {
-    // max-width: 60em;
     width: 100%;
     margin: 0 auto;
     position: relative;
-    // max-height: 420px;
 }
 
 input {
@@ -35,7 +32,6 @@ article {
     position: absolute;
     top: 50%;
     width: 100%;
-    // @include transform(translateY(-50%));
     transform: translateY(-50%);
 
     label {
@@ -65,8 +61,8 @@ article {
         width: 10px;
         height: 10px;
         background: #bbb;
-        // @include transition(all 0.3s);
         transition: all 0.3s;
+        margin: 0 2px 4px 2px;
 
         &:hover {
             background: #ccc;
@@ -124,35 +120,31 @@ article {
     background: #fff;
     background: #fcfff4;
     transform: translateZ(0);
-    // @include transform(translateZ(0));
     transition: all 500ms ease-out;
-    // @include transition(all 500ms ease-out);
 
     .inner {
       transform: translateZ(0);
       transition: all 500ms ease-out;
-        // @include transform(translateZ(0));
-        // @include transition(all 800ms cubic-bezier(0.77, 0, 0.175, 1));
     }
 }
 
 /*---- SET POSITION FOR SLIDE ----*/
 %bind-prev-next-button {
     font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
+    font-style: bold;
+    font-weight: bold;
     text-decoration: inherit;
     margin: 0;
-    line-height: 38px;
-    font-size: 3em;
+    line-height: 28px;
+    font-size: 4em;
     display: block;
     color: #777;
 }
 
 %bind-next-button {
     @extend %bind-prev-next-button;
-    content: "\f105";
-    padding-left: 15px;
+    content: "\203A"; //Right arrow
+    padding-left: 11px;
 }
 
 %bind-next-label {
@@ -169,7 +161,7 @@ article {
 
 %bind-prev-button {
     @extend %bind-prev-next-button;
-    content: "\f104";
+    content: "\2039"; //Left arrow
     padding-left: 8px;
 }
 
