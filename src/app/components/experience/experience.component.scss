@@ -1,3 +1,5 @@
+$inset-color:#323ea8;
+
 section{
   .container{
     h2{
@@ -41,15 +43,15 @@ section{
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(360deg);
-  transition: all 1000ms ease-in-out;
   // transform: scale(1.4);
-  background-color: #a83279;
+  transition: all 1000ms ease-in-out;
+  background-color: $inset-color;
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
-  -moz-box-shadow: inset 40em 0 0 0 #a83279;
-  -webkit-box-shadow: inset 40em 0 0 0 #a83279;
-  box-shadow: inset 40em 0 0 0 #a83279;
+  -moz-box-shadow: inset 40em 0 0 0 $inset-color;
+  -webkit-box-shadow: inset 40em 0 0 0 $inset-color;
+  box-shadow: inset 40em 0 0 0 $inset-color;
 }
 
 .timeline-event-copy {
@@ -58,19 +60,19 @@ section{
   top: -1.875em;
   left: 4em;
   width: 80%;
-}
-
-.timeline-event-copy h3 {
-  font-size: 1.75em;
-}
-
-.timeline-event-copy h4 {
-  font-size: 1.2em;
-  margin-bottom: 1.2em;
-}
-
-.timeline-event-copy strong {
-  font-weight: 700;
+  h3{
+    font-size: 1.75em;
+  }
+  h4{
+    &.org-name{
+      color: orange;
+    }
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+  }
+  strong{
+    font-weight: 700;
+  }
 }
 
 .timeline-event-copy p:not(.timeline-event-thumbnail) {

@@ -1,0 +1,12 @@
+<section>
+<div class="exp-cnt">
+    <div class="container">
+        <ng-container *ngFor="let card of cards; let i = index">
+            <div class="panel" [ngClass]="{'active' : i == currentActiveCard}" (click)="activeCard(i)"
+                style="background-image: url({{card?.imgUrl}})">
+                <h3>{{card?.title}}</h3>
+            </div>
+        </ng-container>
+    </div>
+</div>
+</section>
