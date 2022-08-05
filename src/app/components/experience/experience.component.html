@@ -3,7 +3,9 @@
     <h2>Experience</h2>
     <ul class="timeline">
       <li class="timeline-event" *ngFor="let exp of experience"> 
-        <label class="timeline-event-icon"></label>
+        <label class="timeline-event-icon">
+          <img src="assets/technology/ang.png" class="label-icon">
+        </label>
         <div class="timeline-event-copy">
           <p class="timeline-event-thumbnail">{{exp?.duration?.start}} - {{exp?.duration?.end}}</p>
           <h3>{{exp?.title}}</h3>

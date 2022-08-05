@@ -26,13 +26,23 @@ section{
 .timeline-event {
   position: relative;
   list-style: none;
+  .timeline-event-icon{
+    width: 36px;
+    height: 36px;
+    .label-icon{
+      width: 100%;
+      // margin-right: 10px;
+    }
+  }
 }
 
 .timeline-event:hover .timeline-event-icon {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  transform: rotate(360deg);
+  transition: all 1000ms ease-in-out;
+  // transform: scale(1.4);
   background-color: #a83279;
 }
 
@@ -72,14 +82,14 @@ section{
   -o-transition: -o-transform 0.2s ease-in;
   -webkit-transition: -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: black;
+  // -moz-transform: rotate(45deg);
+  // -ms-transform: rotate(45deg);
+  // -webkit-transform: rotate(45deg);
+  // transform: rotate(45deg);
+  // background-color: black;
   outline: 10px solid white;
   display: block;
-  margin: 0.5em 0.5em 0.5em -0.5em;
+  margin: 0.5em 0.5em 0.5em -1.1em;
   position: absolute;
   top: 0;
   left: 2em;
