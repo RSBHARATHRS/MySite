@@ -1,3 +1,5 @@
+$inset-color:#323ea8;
+
 section{
   .container{
     h2{
@@ -26,20 +28,30 @@ section{
 .timeline-event {
   position: relative;
   list-style: none;
+  .timeline-event-icon{
+    width: 36px;
+    height: 36px;
+    .label-icon{
+      width: 100%;
+      // margin-right: 10px;
+    }
+  }
 }
 
 .timeline-event:hover .timeline-event-icon {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  background-color: #a83279;
+  transform: rotate(360deg);
+  // transform: scale(1.4);
+  transition: all 1000ms ease-in-out;
+  background-color: $inset-color;
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
-  -moz-box-shadow: inset 40em 0 0 0 #a83279;
-  -webkit-box-shadow: inset 40em 0 0 0 #a83279;
-  box-shadow: inset 40em 0 0 0 #a83279;
+  -moz-box-shadow: inset 40em 0 0 0 $inset-color;
+  -webkit-box-shadow: inset 40em 0 0 0 $inset-color;
+  box-shadow: inset 40em 0 0 0 $inset-color;
 }
 
 .timeline-event-copy {
@@ -48,19 +60,19 @@ section{
   top: -1.875em;
   left: 4em;
   width: 80%;
-}
-
-.timeline-event-copy h3 {
-  font-size: 1.75em;
-}
-
-.timeline-event-copy h4 {
-  font-size: 1.2em;
-  margin-bottom: 1.2em;
-}
-
-.timeline-event-copy strong {
-  font-weight: 700;
+  h3{
+    font-size: 1.75em;
+  }
+  h4{
+    &.org-name{
+      color: orange;
+    }
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+  }
+  strong{
+    font-weight: 700;
+  }
 }
 
 .timeline-event-copy p:not(.timeline-event-thumbnail) {
@@ -72,14 +84,14 @@ section{
   -o-transition: -o-transform 0.2s ease-in;
   -webkit-transition: -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: black;
+  // -moz-transform: rotate(45deg);
+  // -ms-transform: rotate(45deg);
+  // -webkit-transform: rotate(45deg);
+  // transform: rotate(45deg);
+  // background-color: black;
   outline: 10px solid white;
   display: block;
-  margin: 0.5em 0.5em 0.5em -0.5em;
+  margin: 0.5em 0.5em 0.5em -1.1em;
   position: absolute;
   top: 0;
   left: 2em;

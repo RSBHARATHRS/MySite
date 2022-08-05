@@ -4,7 +4,7 @@ $num-of-slide: 5;
 .wrapper {
     width: 100%;
     margin: 0 auto;
-    position: relative;
+    position: relative;    
 }
 
 input {
@@ -113,6 +113,9 @@ article {
 
 /* Slider Styling */
 .slider-wrapper {
+    @media only screen and (min-width: 1000px){
+        max-height: 700px;
+     }
     width: 100%;
     overflow: hidden;
     border-radius: 5px;
