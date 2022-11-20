@@ -9,6 +9,7 @@ import { EducationComponent } from './../../components/education/education.compo
 import { ProjectsComponent } from './../../components/projects/projects.component';
 import { GalleryComponent } from '../../components/gallery/gallery.component'
 import { ExperienceComponent } from 'src/app/components/experience/experience.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ExperienceComponent } from 'src/app/components/experience/experience.co
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }
