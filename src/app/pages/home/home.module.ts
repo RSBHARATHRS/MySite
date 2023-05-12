@@ -10,6 +10,7 @@ import { ProjectsComponent } from './../../components/projects/projects.componen
 import { GalleryComponent } from '../../components/gallery/gallery.component'
 import { ExperienceComponent } from 'src/app/components/experience/experience.component';
 import { ReactiveFormsModule } from '@angular/forms';
+// import { StdAloneComponent } from 'src/app/components/std-alone/std-alone.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // StdAloneComponent
   ]
 })
 export class HomeModule { }
